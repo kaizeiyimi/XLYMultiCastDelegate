@@ -46,6 +46,12 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.one = nil;
     });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [self.scrollView.delegate scrollViewShouldScrollToTop:self.scrollView];
+        });
+    });
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -56,6 +62,12 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     NSLog(@"end Decelerating. view controller");
+}
+
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+    NSLog(@"should scroll to top. view controller");
+    return YES;
 }
 
 @end

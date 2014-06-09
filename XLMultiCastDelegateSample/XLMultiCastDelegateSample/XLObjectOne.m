@@ -20,4 +20,10 @@
     NSLog(@"end Decelerating. one");
 }
 
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+    NSLog(@"should scroll to top. one");
+    return YES;
+}
+
 @end

@@ -110,14 +110,28 @@
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
     [self cleanInvalidDelegates];
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-    for (XLDelegateNode *node in self.delegates) {
-        if ([node.delegate respondsToSelector:invocation.selector]) {
+    NSMethodSignature *sig = invocation.methodSignature;
+    const char *returnType = sig.methodReturnType;
+    NSArray *delegates = [self.delegates copy];
+    if (strcmp(returnType, "v") == 0) {
+        dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+        for (XLDelegateNode *node in delegates) {
+            if ([node.delegate respondsToSelector:invocation.selector]) {
+                    dispatch_async(node.dispatchQueue, ^{
+                        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+                        [invocation invokeWithTarget:node.delegate];
+                        dispatch_semaphore_signal(semaphore);   
+                    });
+            }
+        }
+    } else {
+        for (XLDelegateNode *node in delegates) {
+            if ([node.delegate respondsToSelector:invocation.selector]) {
                 dispatch_async(node.dispatchQueue, ^{
-                    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
                     [invocation invokeWithTarget:node.delegate];
-                    dispatch_semaphore_signal(semaphore);   
                 });
+                break;
+            }
         }
     }
 }
