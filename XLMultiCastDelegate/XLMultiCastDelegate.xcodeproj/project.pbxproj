@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6D24D7619D594A800E2BB7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D24D7519D594A800E2BB7E /* AppDelegate.swift */; };
+		F6D24D7B19D594A800E2BB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D24D7919D594A800E2BB7E /* Main.storyboard */; };
+		F6D24D7D19D594A800E2BB7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D24D7C19D594A800E2BB7E /* Images.xcassets */; };
+		F6D24D8019D594A800E2BB7E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D24D7E19D594A800E2BB7E /* LaunchScreen.xib */; };
+		F6D24D8C19D594A800E2BB7E /* XLMultiCastDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D24D8B19D594A800E2BB7E /* XLMultiCastDelegateTests.swift */; };
+		F6D24D9F19D5956F00E2BB7E /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D24D9E19D5956F00E2BB7E /* OCViewController.m */; };
+		F6D24DA119D5959600E2BB7E /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D24DA019D5959600E2BB7E /* SwiftViewController.swift */; };
+		F6D24DA619D5A8F800E2BB7E /* XLMultiCastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D24DA519D5A8F800E2BB7E /* XLMultiCastDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6D24D8619D594A800E2BB7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6D24D6819D594A800E2BB7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6D24D6F19D594A800E2BB7E;
+			remoteInfo = XLMultiCastDelegate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6D24D7019D594A800E2BB7E /* XLMultiCastDelegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLMultiCastDelegate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D24D7419D594A800E2BB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D24D7519D594A800E2BB7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6D24D7A19D594A800E2BB7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6D24D7C19D594A800E2BB7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6D24D7F19D594A800E2BB7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F6D24D8519D594A800E2BB7E /* XLMultiCastDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLMultiCastDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D24D8A19D594A800E2BB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D24D8B19D594A800E2BB7E /* XLMultiCastDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLMultiCastDelegateTests.swift; sourceTree = "<group>"; };
+		F6D24D9519D594C000E2BB7E /* XLMultiCastDelegate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLMultiCastDelegate-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6D24D9D19D5956F00E2BB7E /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		F6D24D9E19D5956F00E2BB7E /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		F6D24DA019D5959600E2BB7E /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		F6D24DA219D595EF00E2BB7E /* SimpleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleProtocol.h; sourceTree = "<group>"; };
+		F6D24DA419D5A8F800E2BB7E /* XLMultiCastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMultiCastDelegate.h; sourceTree = "<group>"; };
+		F6D24DA519D5A8F800E2BB7E /* XLMultiCastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLMultiCastDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6D24D6D19D594A800E2BB7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D24D8219D594A800E2BB7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6D24D6719D594A800E2BB7E = {
+			isa = PBXGroup;
+			children = (
+				F6D24D7219D594A800E2BB7E /* XLMultiCastDelegate */,
+				F6D24D8819D594A800E2BB7E /* XLMultiCastDelegateTests */,
+				F6D24D7119D594A800E2BB7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6D24D7119D594A800E2BB7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24D7019D594A800E2BB7E /* XLMultiCastDelegate.app */,
+				F6D24D8519D594A800E2BB7E /* XLMultiCastDelegateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6D24D7219D594A800E2BB7E /* XLMultiCastDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24D7519D594A800E2BB7E /* AppDelegate.swift */,
+				F6D24DA219D595EF00E2BB7E /* SimpleProtocol.h */,
+				F6D24DA019D5959600E2BB7E /* SwiftViewController.swift */,
+				F6D24D9D19D5956F00E2BB7E /* OCViewController.h */,
+				F6D24D9E19D5956F00E2BB7E /* OCViewController.m */,
+				F6D24DA319D5A8F800E2BB7E /* codes */,
+				F6D24D7919D594A800E2BB7E /* Main.storyboard */,
+				F6D24D7C19D594A800E2BB7E /* Images.xcassets */,
+				F6D24D7E19D594A800E2BB7E /* LaunchScreen.xib */,
+				F6D24D7319D594A800E2BB7E /* Supporting Files */,
+				F6D24D9519D594C000E2BB7E /* XLMultiCastDelegate-Bridging-Header.h */,
+			);
+			path = XLMultiCastDelegate;
+			sourceTree = "<group>";
+		};
+		F6D24D7319D594A800E2BB7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24D7419D594A800E2BB7E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D24D8819D594A800E2BB7E /* XLMultiCastDelegateTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24D8B19D594A800E2BB7E /* XLMultiCastDelegateTests.swift */,
+				F6D24D8919D594A800E2BB7E /* Supporting Files */,
+			);
+			path = XLMultiCastDelegateTests;
+			sourceTree = "<group>";
+		};
+		F6D24D8919D594A800E2BB7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24D8A19D594A800E2BB7E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D24DA319D5A8F800E2BB7E /* codes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D24DA419D5A8F800E2BB7E /* XLMultiCastDelegate.h */,
+				F6D24DA519D5A8F800E2BB7E /* XLMultiCastDelegate.m */,
+			);
+			name = codes;
+			path = ../../codes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6D24D6F19D594A800E2BB7E /* XLMultiCastDelegate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D24D8F19D594A800E2BB7E /* Build configuration list for PBXNativeTarget "XLMultiCastDelegate" */;
+			buildPhases = (
+				F6D24D6C19D594A800E2BB7E /* Sources */,
+				F6D24D6D19D594A800E2BB7E /* Frameworks */,
+				F6D24D6E19D594A800E2BB7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLMultiCastDelegate;
+			productName = XLMultiCastDelegate;
+			productReference = F6D24D7019D594A800E2BB7E /* XLMultiCastDelegate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6D24D8419D594A800E2BB7E /* XLMultiCastDelegateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D24D9219D594A800E2BB7E /* Build configuration list for PBXNativeTarget "XLMultiCastDelegateTests" */;
+			buildPhases = (
+				F6D24D8119D594A800E2BB7E /* Sources */,
+				F6D24D8219D594A800E2BB7E /* Frameworks */,
+				F6D24D8319D594A800E2BB7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6D24D8719D594A800E2BB7E /* PBXTargetDependency */,
+			);
+			name = XLMultiCastDelegateTests;
+			productName = XLMultiCastDelegateTests;
+			productReference = F6D24D8519D594A800E2BB7E /* XLMultiCastDelegateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6D24D6819D594A800E2BB7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = kaizei;
+				TargetAttributes = {
+					F6D24D6F19D594A800E2BB7E = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					F6D24D8419D594A800E2BB7E = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F6D24D6F19D594A800E2BB7E;
+					};
+				};
+			};
+			buildConfigurationList = F6D24D6B19D594A800E2BB7E /* Build configuration list for PBXProject "XLMultiCastDelegate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6D24D6719D594A800E2BB7E;
+			productRefGroup = F6D24D7119D594A800E2BB7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6D24D6F19D594A800E2BB7E /* XLMultiCastDelegate */,
+				F6D24D8419D594A800E2BB7E /* XLMultiCastDelegateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6D24D6E19D594A800E2BB7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D24D7B19D594A800E2BB7E /* Main.storyboard in Resources */,
+				F6D24D8019D594A800E2BB7E /* LaunchScreen.xib in Resources */,
+				F6D24D7D19D594A800E2BB7E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D24D8319D594A800E2BB7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6D24D6C19D594A800E2BB7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D24DA119D5959600E2BB7E /* SwiftViewController.swift in Sources */,
+				F6D24DA619D5A8F800E2BB7E /* XLMultiCastDelegate.m in Sources */,
+				F6D24D9F19D5956F00E2BB7E /* OCViewController.m in Sources */,
+				F6D24D7619D594A800E2BB7E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D24D8119D594A800E2BB7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D24D8C19D594A800E2BB7E /* XLMultiCastDelegateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6D24D8719D594A800E2BB7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6D24D6F19D594A800E2BB7E /* XLMultiCastDelegate */;
+			targetProxy = F6D24D8619D594A800E2BB7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6D24D7919D594A800E2BB7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D24D7A19D594A800E2BB7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6D24D7E19D594A800E2BB7E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D24D7F19D594A800E2BB7E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6D24D8D19D594A800E2BB7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6D24D8E19D594A800E2BB7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6D24D9019D594A800E2BB7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = XLMultiCastDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLMultiCastDelegate/XLMultiCastDelegate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6D24D9119D594A800E2BB7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = XLMultiCastDelegate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLMultiCastDelegate/XLMultiCastDelegate-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F6D24D9319D594A800E2BB7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XLMultiCastDelegateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLMultiCastDelegate.app/XLMultiCastDelegate";
+			};
+			name = Debug;
+		};
+		F6D24D9419D594A800E2BB7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XLMultiCastDelegateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLMultiCastDelegate.app/XLMultiCastDelegate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6D24D6B19D594A800E2BB7E /* Build configuration list for PBXProject "XLMultiCastDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D24D8D19D594A800E2BB7E /* Debug */,
+				F6D24D8E19D594A800E2BB7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D24D8F19D594A800E2BB7E /* Build configuration list for PBXNativeTarget "XLMultiCastDelegate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D24D9019D594A800E2BB7E /* Debug */,
+				F6D24D9119D594A800E2BB7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D24D9219D594A800E2BB7E /* Build configuration list for PBXNativeTarget "XLMultiCastDelegateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D24D9319D594A800E2BB7E /* Debug */,
+				F6D24D9419D594A800E2BB7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6D24D6819D594A800E2BB7E /* Project object */;
+}

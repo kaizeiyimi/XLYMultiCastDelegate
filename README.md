@@ -3,18 +3,19 @@ XLMultiCastDelegate
 
 allow people to multicast the delegate methods invocation to multi delegate objects.
 
+updated for mixing with swift. see demo for more detail.
+
 Description
 ===================
 it uses some runtime methods such as respondsToSelector:, methodSignatureForSelector: and forwardInvocation: to achieve the method invocation cast.
 
 you can set some object's delegate property like this:
-<code>
-<br>XLMultiCastDelegate *multiCastDelegate = [[XLMultiCastDelegate alloc]initWithProtocol:@protocol(AProtocol)];
-<br>[multiCastDelegate addDelegate:firstDelegate dispatchQueue:firstDispatchQueue];
-<br>[multiCastDelegate addDelegate:secondDelegate dispatchQueue:secondDispatchQueue];
-<br>object.delegate = (id\<AProtocol\>)multiCastDelegate;
-<br>
-</code><br>
+
+    XLMultiCastDelegate *multiCastDelegate = [[XLMultiCastDelegate alloc]initWithProtocol:@protocol(AProtocol)];
+    [multiCastDelegate addDelegate:firstDelegate dispatchQueue:firstDispatchQueue];
+    [multiCastDelegate addDelegate:secondDelegate dispatchQueue:secondDispatchQueue];
+    object.delegate = (id\<AProtocol\>)multiCastDelegate;
+
 then when the object call a delegate method for example 'hello', the multiCastDelegate can forward the invocation to firstDelegate and then to secondDelegate. firstDelegate will receive 'hello' in firstDispatchQueue and secondDelegate will receive in secondDispatchQueue.
 
 this is different with normal delegate. Normal delegate can only be a single object who confirms to 'AProtocol', while using MultiCastDelegate, all the interesting objects can receive a method calling.
