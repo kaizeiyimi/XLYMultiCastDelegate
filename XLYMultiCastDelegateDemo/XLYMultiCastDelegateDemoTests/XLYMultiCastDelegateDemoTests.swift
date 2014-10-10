@@ -1,15 +1,15 @@
 //
-//  XLMultiCastDelegateTests.swift
-//  XLMultiCastDelegateTests
+//  XLYMultiCastDelegateDemoTests.swift
+//  XLYMultiCastDelegateDemoTests
 //
-//  Created by kaizei on 14/9/26.
+//  Created by 王凯 on 14-10-10.
 //  Copyright (c) 2014年 kaizei. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class XLMultiCastDelegateTests: XCTestCase {
+class XLYMultiCastDelegateDemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

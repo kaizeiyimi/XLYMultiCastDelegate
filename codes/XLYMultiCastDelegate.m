@@ -1,16 +1,16 @@
 //
-//  XLMultiCastDelegate.m
+//  XLYMultiCastDelegate.m
 //
 //  Created by 王凯 on 14-9-26.
 //  Copyright (c) 2014年 kaizei. All rights reserved.
 //
 
-#import "XLMultiCastDelegate.h"
+#import "XLYMultiCastDelegate.h"
 
 #import <objc/runtime.h>
 
-#pragma mark - XLDelegateNode
-@interface XLDelegateNode : NSObject
+#pragma mark - XLYDelegateNode
+@interface XLYDelegateNode : NSObject
 
 @property (nonatomic, weak) id delegate;
 @property (nonatomic, strong) dispatch_queue_t dispatchQueue;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation XLDelegateNode
+@implementation XLYDelegateNode
 
 - (instancetype)initWithDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
@@ -35,15 +35,15 @@
 
 @end
 
-#pragma mark - XLMultiCastDelegate
-@interface XLMultiCastDelegate ()
+#pragma mark - XLYMultiCastDelegate
+@interface XLYMultiCastDelegate ()
 
 @property (nonatomic, strong) NSMutableArray *delegates;
 @property (nonatomic, strong, readonly) Protocol *protocol;
 
 @end
 
-@implementation XLMultiCastDelegate
+@implementation XLYMultiCastDelegate
 
 - (instancetype)initWithProtocolName:(NSString *)protocolName
 {
@@ -77,7 +77,7 @@
     if (!delegate || ![delegate conformsToProtocol:self.protocol]) {
         return NO;
     }
-    XLDelegateNode *node = [[XLDelegateNode alloc] initWithDelegate:delegate dispatchQueue:queue];
+    XLYDelegateNode *node = [[XLYDelegateNode alloc] initWithDelegate:delegate dispatchQueue:queue];
     [self.delegates addObject:node];
     return YES;
 }
@@ -89,7 +89,7 @@
 
 - (BOOL)hasDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
-    for (XLDelegateNode *node in self.delegates) {
+    for (XLYDelegateNode *node in self.delegates) {
         if (node.delegate == delegate) {
             if (!queue || queue == node.dispatchQueue) {
                 return YES;
@@ -110,7 +110,7 @@
         return 0;
     }
     NSMutableArray *nodesToRemove = [NSMutableArray arrayWithCapacity:self.delegates.count];
-    for (XLDelegateNode *node in self.delegates) {
+    for (XLYDelegateNode *node in self.delegates) {
         if (node.delegate == delegate) {
             if (!queue || queue == node.dispatchQueue) {
                 [nodesToRemove addObject:node];
@@ -125,7 +125,7 @@
 - (void)cleanInvalidDelegates
 {
     NSMutableArray *nodesToRemove = [NSMutableArray arrayWithCapacity:self.delegates.count];
-    for (XLDelegateNode *node in self.delegates) {
+    for (XLYDelegateNode *node in self.delegates) {
         if (!node.delegate) {
             [nodesToRemove addObject:node];
         }
@@ -143,7 +143,7 @@
     NSArray *delegates = [self.delegates copy];
     if (strcmp(returnType, "v") == 0) {
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-        for (XLDelegateNode *node in delegates) {
+        for (XLYDelegateNode *node in delegates) {
             if ([node.delegate respondsToSelector:invocation.selector]) {
                 dispatch_async(node.dispatchQueue, ^{
                     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
@@ -153,7 +153,7 @@
             }
         }
     } else { //just in case
-        for (XLDelegateNode *node in delegates) {
+        for (XLYDelegateNode *node in delegates) {
             if ([node.delegate respondsToSelector:invocation.selector]) {
                 [invocation invokeWithTarget:node.delegate];
                 break;
@@ -165,7 +165,7 @@
 //to see if any delegate can respondsToSelector
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-    for(XLDelegateNode *node in self.delegates) {
+    for(XLYDelegateNode *node in self.delegates) {
         if ([node.delegate respondsToSelector:aSelector]) {
             return YES;
         }
@@ -175,7 +175,7 @@
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
-    for(XLDelegateNode *node in self.delegates) {
+    for(XLYDelegateNode *node in self.delegates) {
         if ([node.delegate respondsToSelector:aSelector]) {
             return [node.delegate methodSignatureForSelector:aSelector];
         }

@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F66CFF1E19E78CF000878CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */; };
+		F66CFF2319E78CF000878CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66CFF2119E78CF000878CE3 /* Main.storyboard */; };
+		F66CFF2519E78CF000878CE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66CFF2419E78CF000878CE3 /* Images.xcassets */; };
+		F66CFF2819E78CF000878CE3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CFF2619E78CF000878CE3 /* LaunchScreen.xib */; };
+		F66CFF3419E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF3319E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift */; };
+		F66CFF4319E78DAF00878CE3 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF3F19E78DAF00878CE3 /* OCViewController.m */; };
+		F66CFF4419E78DAF00878CE3 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF4119E78DAF00878CE3 /* SwiftViewController.swift */; };
+		F66CFF4819E78DF400878CE3 /* XLYMultiCastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F66CFF2E19E78CF000878CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F66CFF1019E78CF000878CE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F66CFF1719E78CF000878CE3;
+			remoteInfo = XLYMultiCastDelegateDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F66CFF1819E78CF000878CE3 /* XLYMultiCastDelegateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLYMultiCastDelegateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66CFF1C19E78CF000878CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F66CFF2219E78CF000878CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F66CFF2419E78CF000878CE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F66CFF2719E78CF000878CE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F66CFF2D19E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLYMultiCastDelegateDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F66CFF3219E78CF000878CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66CFF3319E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLYMultiCastDelegateDemoTests.swift; sourceTree = "<group>"; };
+		F66CFF3D19E78DAF00878CE3 /* XLYMultiCastDelegateDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XLYMultiCastDelegateDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F66CFF3E19E78DAF00878CE3 /* OCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		F66CFF3F19E78DAF00878CE3 /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		F66CFF4019E78DAF00878CE3 /* SimpleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleProtocol.h; sourceTree = "<group>"; };
+		F66CFF4119E78DAF00878CE3 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		F66CFF4619E78DF400878CE3 /* XLYMultiCastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLYMultiCastDelegate.h; sourceTree = "<group>"; };
+		F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLYMultiCastDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F66CFF1519E78CF000878CE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F66CFF2A19E78CF000878CE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F66CFF0F19E78CF000878CE3 = {
+			isa = PBXGroup;
+			children = (
+				F66CFF1A19E78CF000878CE3 /* XLYMultiCastDelegateDemo */,
+				F66CFF3019E78CF000878CE3 /* XLYMultiCastDelegateDemoTests */,
+				F66CFF1919E78CF000878CE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F66CFF1919E78CF000878CE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF1819E78CF000878CE3 /* XLYMultiCastDelegateDemo.app */,
+				F66CFF2D19E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F66CFF1A19E78CF000878CE3 /* XLYMultiCastDelegateDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF4519E78DF400878CE3 /* codes */,
+				F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */,
+				F66CFF2119E78CF000878CE3 /* Main.storyboard */,
+				F66CFF4019E78DAF00878CE3 /* SimpleProtocol.h */,
+				F66CFF3E19E78DAF00878CE3 /* OCViewController.h */,
+				F66CFF3F19E78DAF00878CE3 /* OCViewController.m */,
+				F66CFF4119E78DAF00878CE3 /* SwiftViewController.swift */,
+				F66CFF2419E78CF000878CE3 /* Images.xcassets */,
+				F66CFF2619E78CF000878CE3 /* LaunchScreen.xib */,
+				F66CFF1B19E78CF000878CE3 /* Supporting Files */,
+				F66CFF3D19E78DAF00878CE3 /* XLYMultiCastDelegateDemo-Bridging-Header.h */,
+			);
+			path = XLYMultiCastDelegateDemo;
+			sourceTree = "<group>";
+		};
+		F66CFF1B19E78CF000878CE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF1C19E78CF000878CE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F66CFF3019E78CF000878CE3 /* XLYMultiCastDelegateDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF3319E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift */,
+				F66CFF3119E78CF000878CE3 /* Supporting Files */,
+			);
+			path = XLYMultiCastDelegateDemoTests;
+			sourceTree = "<group>";
+		};
+		F66CFF3119E78CF000878CE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF3219E78CF000878CE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F66CFF4519E78DF400878CE3 /* codes */ = {
+			isa = PBXGroup;
+			children = (
+				F66CFF4619E78DF400878CE3 /* XLYMultiCastDelegate.h */,
+				F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */,
+			);
+			name = codes;
+			path = ../../codes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F66CFF1719E78CF000878CE3 /* XLYMultiCastDelegateDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F66CFF3719E78CF000878CE3 /* Build configuration list for PBXNativeTarget "XLYMultiCastDelegateDemo" */;
+			buildPhases = (
+				F66CFF1419E78CF000878CE3 /* Sources */,
+				F66CFF1519E78CF000878CE3 /* Frameworks */,
+				F66CFF1619E78CF000878CE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLYMultiCastDelegateDemo;
+			productName = XLYMultiCastDelegateDemo;
+			productReference = F66CFF1819E78CF000878CE3 /* XLYMultiCastDelegateDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F66CFF2C19E78CF000878CE3 /* XLYMultiCastDelegateDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F66CFF3A19E78CF000878CE3 /* Build configuration list for PBXNativeTarget "XLYMultiCastDelegateDemoTests" */;
+			buildPhases = (
+				F66CFF2919E78CF000878CE3 /* Sources */,
+				F66CFF2A19E78CF000878CE3 /* Frameworks */,
+				F66CFF2B19E78CF000878CE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F66CFF2F19E78CF000878CE3 /* PBXTargetDependency */,
+			);
+			name = XLYMultiCastDelegateDemoTests;
+			productName = XLYMultiCastDelegateDemoTests;
+			productReference = F66CFF2D19E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F66CFF1019E78CF000878CE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = kaizei;
+				TargetAttributes = {
+					F66CFF1719E78CF000878CE3 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					F66CFF2C19E78CF000878CE3 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F66CFF1719E78CF000878CE3;
+					};
+				};
+			};
+			buildConfigurationList = F66CFF1319E78CF000878CE3 /* Build configuration list for PBXProject "XLYMultiCastDelegateDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F66CFF0F19E78CF000878CE3;
+			productRefGroup = F66CFF1919E78CF000878CE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F66CFF1719E78CF000878CE3 /* XLYMultiCastDelegateDemo */,
+				F66CFF2C19E78CF000878CE3 /* XLYMultiCastDelegateDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F66CFF1619E78CF000878CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66CFF2319E78CF000878CE3 /* Main.storyboard in Resources */,
+				F66CFF2819E78CF000878CE3 /* LaunchScreen.xib in Resources */,
+				F66CFF2519E78CF000878CE3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F66CFF2B19E78CF000878CE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F66CFF1419E78CF000878CE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66CFF4419E78DAF00878CE3 /* SwiftViewController.swift in Sources */,
+				F66CFF4819E78DF400878CE3 /* XLYMultiCastDelegate.m in Sources */,
+				F66CFF4319E78DAF00878CE3 /* OCViewController.m in Sources */,
+				F66CFF1E19E78CF000878CE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F66CFF2919E78CF000878CE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F66CFF3419E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F66CFF2F19E78CF000878CE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F66CFF1719E78CF000878CE3 /* XLYMultiCastDelegateDemo */;
+			targetProxy = F66CFF2E19E78CF000878CE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F66CFF2119E78CF000878CE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F66CFF2219E78CF000878CE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F66CFF2619E78CF000878CE3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F66CFF2719E78CF000878CE3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F66CFF3519E78CF000878CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F66CFF3619E78CF000878CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F66CFF3819E78CF000878CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = XLYMultiCastDelegateDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLYMultiCastDelegateDemo/XLYMultiCastDelegateDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F66CFF3919E78CF000878CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = XLYMultiCastDelegateDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XLYMultiCastDelegateDemo/XLYMultiCastDelegateDemo-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F66CFF3B19E78CF000878CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XLYMultiCastDelegateDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLYMultiCastDelegateDemo.app/XLYMultiCastDelegateDemo";
+			};
+			name = Debug;
+		};
+		F66CFF3C19E78CF000878CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XLYMultiCastDelegateDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLYMultiCastDelegateDemo.app/XLYMultiCastDelegateDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F66CFF1319E78CF000878CE3 /* Build configuration list for PBXProject "XLYMultiCastDelegateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F66CFF3519E78CF000878CE3 /* Debug */,
+				F66CFF3619E78CF000878CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F66CFF3719E78CF000878CE3 /* Build configuration list for PBXNativeTarget "XLYMultiCastDelegateDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F66CFF3819E78CF000878CE3 /* Debug */,
+				F66CFF3919E78CF000878CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F66CFF3A19E78CF000878CE3 /* Build configuration list for PBXNativeTarget "XLYMultiCastDelegateDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F66CFF3B19E78CF000878CE3 /* Debug */,
+				F66CFF3C19E78CF000878CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F66CFF1019E78CF000878CE3 /* Project object */;
+}

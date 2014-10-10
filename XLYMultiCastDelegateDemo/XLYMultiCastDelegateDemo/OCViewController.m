@@ -8,7 +8,7 @@
 
 #import "OCViewController.h"
 
-#import "XLMultiCastDelegate.h"
+#import "XLYMultiCastDelegate.h"
 #import "SimpleProtocol.h"
 
 @interface OCViewController () <SimpleProtocol>
@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XLMultiCastDelegate *multiDelegate = [[XLMultiCastDelegate alloc] initWithConformingProtocol:@protocol(SimpleProtocol)];
+    XLYMultiCastDelegate *multiDelegate = [[XLYMultiCastDelegate alloc] initWithConformingProtocol:@protocol(SimpleProtocol)];
     [multiDelegate addDelegate:self dispatchQueue:dispatch_get_main_queue()];
     self.multiDelegate = (id<SimpleProtocol>)multiDelegate;
 }

@@ -1,4 +1,4 @@
-XLMultiCastDelegate
+XLYMultiCastDelegate
 ===================
 
 allow people to multicast the delegate methods invocation to multi delegate objects.
@@ -11,10 +11,12 @@ it uses some runtime methods such as respondsToSelector:, methodSignatureForSele
 
 you can set some object's delegate property like this:
 
-    XLMultiCastDelegate *multiCastDelegate = [[XLMultiCastDelegate alloc]initWithProtocol:@protocol(AProtocol)];
-    [multiCastDelegate addDelegate:firstDelegate dispatchQueue:firstDispatchQueue];
-    [multiCastDelegate addDelegate:secondDelegate dispatchQueue:secondDispatchQueue];
-    object.delegate = (id\<AProtocol\>)multiCastDelegate;
+```objective-c
+XLYMultiCastDelegate *multiCastDelegate = [[XLYMultiCastDelegate alloc]initWithConformingProtocol:@protocol(AProtocol)];
+[multiCastDelegate addDelegate:firstDelegate dispatchQueue:firstDispatchQueue];
+[multiCastDelegate addDelegate:secondDelegate dispatchQueue:secondDispatchQueue];
+object.delegate = (id<AProtocol>)multiCastDelegate;
+````
 
 then when the object call a delegate method for example 'hello', the multiCastDelegate can forward the invocation to firstDelegate and then to secondDelegate. firstDelegate will receive 'hello' in firstDispatchQueue and secondDelegate will receive in secondDispatchQueue.
 
