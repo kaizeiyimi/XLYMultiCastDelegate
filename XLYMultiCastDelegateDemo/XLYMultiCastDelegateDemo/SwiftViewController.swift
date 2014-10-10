@@ -18,7 +18,8 @@ protocol SimpleSwiftProtocol {
 
 class SwiftViewController: UIViewController, SimpleProtocol, SimpleSwiftProtocol {
     //multiDelegate which uses objective-c protocol
-    var multiDelegateUsingOCProtocol = XLYMultiCastDelegate(conformingProtocol: objc_getProtocol("SimpleProtocol"))
+//    var multiDelegateUsingOCProtocol = XLYMultiCastDelegate(conformingProtocol: objc_getProtocol("SimpleProtocol"))
+    var multiDelegateUsingOCProtocol = XLYMultiCastDelegate(protocolName:"SimpleProtocol")
     //multiDelegate which uses swift protocol
     var multiDelegateUSingSwiftProtocol = XLYMultiCastDelegate(protocolName: "XLYMultiCastDelegateDemo.SimpleSwiftProtocol")
     

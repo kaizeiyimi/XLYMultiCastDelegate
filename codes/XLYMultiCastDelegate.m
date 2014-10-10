@@ -56,7 +56,6 @@
     NSAssert(protocol, @"must give a valid protocol.");
     _delegates = [NSMutableArray array];
     _protocol = protocol;
-    class_addProtocol(self.class, protocol);
     return self;
 }
 
@@ -65,7 +64,6 @@
     NSAssert(NO, @"use '-initWithProtocolName:' instead.");
     return nil;
 }
-
 
 - (NSUInteger)numberOfDelegates
 {
@@ -134,6 +132,11 @@
 }
 
 #pragma mark - runtime
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol
+{
+    return aProtocol == self.protocol;
+}
+
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
     [invocation retainArguments];
