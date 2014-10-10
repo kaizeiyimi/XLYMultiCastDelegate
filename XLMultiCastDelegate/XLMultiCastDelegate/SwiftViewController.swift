@@ -42,8 +42,9 @@ class SwiftViewController: UIViewController, SimpleProtocol, SimpleSwiftProtocol
     }
     
 //MARK: - simple protocol
-    func someRequiredMethod(object: AnyObject!) {
+    func someRequiredMethod(object: AnyObject!) -> AnyObject! {
         println("swift viewController required method. \(object)")
+        return object
     }
     
     func someOptionalMethod() {

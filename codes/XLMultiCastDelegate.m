@@ -152,12 +152,10 @@
                 });
             }
         }
-    } else {
+    } else { //just in case
         for (XLDelegateNode *node in delegates) {
             if ([node.delegate respondsToSelector:invocation.selector]) {
-                dispatch_async(node.dispatchQueue, ^{
-                    [invocation invokeWithTarget:node.delegate];
-                });
+                [invocation invokeWithTarget:node.delegate];
                 break;
             }
         }

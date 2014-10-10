@@ -34,7 +34,8 @@
 - (IBAction)buttonClicked:(UIButton *)button
 {
     [self.multiDelegate someOptionalMethod];
-    [self.multiDelegate someRequiredMethod:button];
+    //you should not use multiCastDelegate for method which has a return value.
+    __unused id result = [self.multiDelegate someRequiredMethod:button];
 }
 
 #pragma mark - simple protocol
@@ -43,9 +44,10 @@
     NSLog(@"OC viewController optional method.");
 }
 
-- (void)someRequiredMethod:(id)object
+- (id)someRequiredMethod:(id)object
 {
     NSLog(@"OC viewController requierd method. %@", object);
+    return object;
 }
 
 @end

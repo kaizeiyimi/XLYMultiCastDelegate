@@ -11,10 +11,11 @@
 
 @protocol SimpleProtocol <NSObject>
 
-- (void)someRequiredMethod:(id)object;
+- (id)someRequiredMethod:(id)object;
 
 @optional
 - (void)someOptionalMethod;
+
 
 @end
 
