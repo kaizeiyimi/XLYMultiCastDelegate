@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 #pragma mark - XLYDelegateNode
+
 @interface XLYDelegateNode : NSObject
 
 @property (nonatomic, weak) id delegate;
@@ -22,23 +23,20 @@
 
 - (instancetype)initWithDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
-    if (self = [super init]) {
-        self.delegate = delegate;
-        if (queue) {
-            self.dispatchQueue = queue;
-        } else {
-            self.dispatchQueue = dispatch_get_main_queue();
-        }
-    }
-    return self;
+  if (self = [super init]) {
+    self.delegate = delegate;
+    self.dispatchQueue = queue ? queue : dispatch_get_main_queue();
+  }
+  return self;
 }
 
 @end
 
 #pragma mark - XLYMultiCastDelegate
+
 @interface XLYMultiCastDelegate ()
 
-@property (nonatomic, strong) NSMutableArray *delegates;
+@property (nonatomic, strong) NSMutableArray *delegateNodes;
 @property (nonatomic, strong, readonly) Protocol *protocol;
 
 @end
@@ -47,143 +45,143 @@
 
 - (instancetype)initWithProtocolName:(NSString *)protocolName
 {
-    Protocol *protocol = objc_getProtocol(protocolName.UTF8String);
-    return [self initWithConformingProtocol:protocol];
+  Protocol *protocol = objc_getProtocol(protocolName.UTF8String);
+  return [self initWithConformingProtocol:protocol];
 }
 
 - (instancetype)initWithConformingProtocol:(Protocol *)protocol;
 {
-    NSAssert(protocol, @"must give a valid protocol.");
-    _delegates = [NSMutableArray array];
-    _protocol = protocol;
-    return self;
+  NSAssert(protocol, @"must give a valid protocol.");
+  _delegateNodes = [NSMutableArray array];
+  _protocol = protocol;
+  class_addProtocol(self.class, protocol);
+  return self;
 }
 
 - (instancetype)init
 {
-    NSAssert(NO, @"use '-initWithProtocolName:' instead.");
-    return nil;
+  NSAssert(NO, @"use '-initWithProtocolName:' instead.");
+  return nil;
 }
+
 
 - (NSUInteger)numberOfDelegates
 {
-    return self.delegates.count;
+  [self cleanInvalidDelegates];
+  return self.delegateNodes.count;
 }
 
 - (BOOL)addDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
-    if (!delegate || ![delegate conformsToProtocol:self.protocol]) {
-        return NO;
-    }
-    XLYDelegateNode *node = [[XLYDelegateNode alloc] initWithDelegate:delegate dispatchQueue:queue];
-    [self.delegates addObject:node];
-    return YES;
+  if (!delegate || ![delegate conformsToProtocol:self.protocol]) {
+    return NO;
+  }
+  XLYDelegateNode *node = [[XLYDelegateNode alloc] initWithDelegate:delegate dispatchQueue:queue];
+  [self.delegateNodes addObject:node];
+  return YES;
 }
 
 - (BOOL)hasDelegate:(id)delegate
 {
-    return [self hasDelegate:delegate dispatchQueue:nil];
+  return [self hasDelegate:delegate dispatchQueue:nil];
 }
 
 - (BOOL)hasDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
-    for (XLYDelegateNode *node in self.delegates) {
-        if (node.delegate == delegate) {
-            if (!queue || queue == node.dispatchQueue) {
-                return YES;
-            }
-        }
-    }
+  if (!delegate) {
     return NO;
+  }
+  for (XLYDelegateNode *node in self.delegateNodes) {
+    if (node.delegate == delegate && (!queue || queue == node.dispatchQueue)) {
+      return YES;
+    }
+  }
+  return NO;
 }
 
 - (NSUInteger)removeDelegate:(id)delegate
 {
-    return [self removeDelegate:delegate dispatchQueue:nil];
+  return [self removeDelegate:delegate dispatchQueue:nil];
 }
 
 - (NSUInteger)removeDelegate:(id)delegate dispatchQueue:(dispatch_queue_t)queue
 {
-    if (!delegate) {
-        return 0;
+  __block NSInteger count = 0;
+  [self.delegateNodes filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(XLYDelegateNode *node, NSDictionary *bindings) {
+    if (node.delegate == delegate) {
+      count ++;
+      return NO;
     }
-    NSMutableArray *nodesToRemove = [NSMutableArray arrayWithCapacity:self.delegates.count];
-    for (XLYDelegateNode *node in self.delegates) {
-        if (node.delegate == delegate) {
-            if (!queue || queue == node.dispatchQueue) {
-                [nodesToRemove addObject:node];
-            }
-        } else if (!node.delegate) { //顺便删除无效的代理
-            [nodesToRemove addObject:node];
-        }
+    if (!node.delegate) {
+      return NO;
     }
-    [self.delegates removeObjectsInArray:nodesToRemove];
-    return nodesToRemove.count;
+    return YES;
+  }]];
+  return count;
 }
+
+#pragma mark - private methods
 - (void)cleanInvalidDelegates
 {
-    NSMutableArray *nodesToRemove = [NSMutableArray arrayWithCapacity:self.delegates.count];
-    for (XLYDelegateNode *node in self.delegates) {
-        if (!node.delegate) {
-            [nodesToRemove addObject:node];
-        }
-    }
-    [self.delegates removeObjectsInArray:nodesToRemove];
+  [self.delegateNodes filterUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(XLYDelegateNode *node, NSDictionary *bindings) {
+    return node.delegate != nil;
+  }]];
 }
 
 #pragma mark - runtime
-- (BOOL)conformsToProtocol:(Protocol *)aProtocol
-{
-    return aProtocol == self.protocol;
-}
-
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    [invocation retainArguments];
-    [self cleanInvalidDelegates];
-    NSMethodSignature *sig = invocation.methodSignature;
-    const char *returnType = sig.methodReturnType;
-    NSArray *delegates = [self.delegates copy];
+  [invocation retainArguments];
+  [self cleanInvalidDelegates];
+  NSMethodSignature *sig = invocation.methodSignature;
+  const char *returnType = sig.methodReturnType;
+  NSArray *delegates = [self.delegateNodes copy];
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     if (strcmp(returnType, "v") == 0) {
-        dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-        for (XLYDelegateNode *node in delegates) {
-            if ([node.delegate respondsToSelector:invocation.selector]) {
-                dispatch_async(node.dispatchQueue, ^{
-                    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-                    [invocation invokeWithTarget:node.delegate];
-                    dispatch_semaphore_signal(semaphore);
-                });
+      dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
+      for (XLYDelegateNode *node in delegates) {
+        if ([node.delegate respondsToSelector:invocation.selector]) {
+          dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+          dispatch_async(node.dispatchQueue, ^{
+            @autoreleasepool {
+              [invocation invokeWithTarget:node.delegate];
             }
+            dispatch_semaphore_signal(semaphore);
+          });
         }
-    } else { //just in case
-        for (XLYDelegateNode *node in delegates) {
-            if ([node.delegate respondsToSelector:invocation.selector]) {
-                [invocation invokeWithTarget:node.delegate];
-                break;
-            }
+      }
+    } else {
+      for (XLYDelegateNode *node in delegates) {
+        if ([node.delegate respondsToSelector:invocation.selector]) {
+          dispatch_async(node.dispatchQueue, ^{
+            [invocation invokeWithTarget:node.delegate];
+          });
+          break;
         }
+      }
     }
+  });
 }
 
 //to see if any delegate can respondsToSelector
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-    for(XLYDelegateNode *node in self.delegates) {
-        if ([node.delegate respondsToSelector:aSelector]) {
-            return YES;
-        }
+  for(XLYDelegateNode *node in self.delegateNodes) {
+    if ([node.delegate respondsToSelector:aSelector]) {
+      return YES;
     }
-    return NO;
+  }
+  return NO;
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
-    for(XLYDelegateNode *node in self.delegates) {
-        if ([node.delegate respondsToSelector:aSelector]) {
-            return [node.delegate methodSignatureForSelector:aSelector];
-        }
+  for(XLYDelegateNode *node in self.delegateNodes) {
+    if ([node.delegate respondsToSelector:aSelector]) {
+      return [node.delegate methodSignatureForSelector:aSelector];
     }
-    return [self.class instanceMethodSignatureForSelector:@selector(doNothing)];
+  }
+  return [self.class instanceMethodSignatureForSelector:@selector(doNothing)];
 }
 
 - (void)doNothing{}

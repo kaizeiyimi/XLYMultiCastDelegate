@@ -32,11 +32,11 @@ class SwiftViewController: UIViewController, SimpleProtocol, SimpleSwiftProtocol
     }
     
     @IBAction func buttonClicked(button: UIButton) {
-        let d1 = multiDelegateUsingOCProtocol as SimpleProtocol
+        let d1 = multiDelegateUsingOCProtocol as! SimpleProtocol
         d1.someOptionalMethod!()
         d1.someRequiredMethod(button)
         
-        let d2 = multiDelegateUSingSwiftProtocol as SimpleSwiftProtocol
+        let d2 = multiDelegateUSingSwiftProtocol as! SimpleSwiftProtocol
         //call of someSwiftOptionalMethod will do nothing because we have no implementation
         d2.someSwiftOptionalMethod!()
         d2.someSwiftRequiredMethod(button)

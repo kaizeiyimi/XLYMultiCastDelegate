@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F601EF971B23117200D89F28 /* XLYMultiCastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F601EF961B23117200D89F28 /* XLYMultiCastDelegate.m */; };
 		F66CFF1E19E78CF000878CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */; };
 		F66CFF2319E78CF000878CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66CFF2119E78CF000878CE3 /* Main.storyboard */; };
 		F66CFF2519E78CF000878CE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66CFF2419E78CF000878CE3 /* Images.xcassets */; };
@@ -14,7 +15,6 @@
 		F66CFF3419E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF3319E78CF000878CE3 /* XLYMultiCastDelegateDemoTests.swift */; };
 		F66CFF4319E78DAF00878CE3 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF3F19E78DAF00878CE3 /* OCViewController.m */; };
 		F66CFF4419E78DAF00878CE3 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF4119E78DAF00878CE3 /* SwiftViewController.swift */; };
-		F66CFF4819E78DF400878CE3 /* XLYMultiCastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F601EF951B23117200D89F28 /* XLYMultiCastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLYMultiCastDelegate.h; sourceTree = "<group>"; };
+		F601EF961B23117200D89F28 /* XLYMultiCastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLYMultiCastDelegate.m; sourceTree = "<group>"; };
 		F66CFF1819E78CF000878CE3 /* XLYMultiCastDelegateDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLYMultiCastDelegateDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66CFF1C19E78CF000878CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		F66CFF3F19E78DAF00878CE3 /* OCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		F66CFF4019E78DAF00878CE3 /* SimpleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleProtocol.h; sourceTree = "<group>"; };
 		F66CFF4119E78DAF00878CE3 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
-		F66CFF4619E78DF400878CE3 /* XLYMultiCastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLYMultiCastDelegate.h; sourceTree = "<group>"; };
-		F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLYMultiCastDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F601EF941B23117200D89F28 /* codes */ = {
+			isa = PBXGroup;
+			children = (
+				F601EF951B23117200D89F28 /* XLYMultiCastDelegate.h */,
+				F601EF961B23117200D89F28 /* XLYMultiCastDelegate.m */,
+			);
+			name = codes;
+			path = ../../codes;
+			sourceTree = "<group>";
+		};
 		F66CFF0F19E78CF000878CE3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +95,7 @@
 		F66CFF1A19E78CF000878CE3 /* XLYMultiCastDelegateDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F66CFF4519E78DF400878CE3 /* codes */,
+				F601EF941B23117200D89F28 /* codes */,
 				F66CFF1D19E78CF000878CE3 /* AppDelegate.swift */,
 				F66CFF2119E78CF000878CE3 /* Main.storyboard */,
 				F66CFF4019E78DAF00878CE3 /* SimpleProtocol.h */,
@@ -123,16 +133,6 @@
 				F66CFF3219E78CF000878CE3 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F66CFF4519E78DF400878CE3 /* codes */ = {
-			isa = PBXGroup;
-			children = (
-				F66CFF4619E78DF400878CE3 /* XLYMultiCastDelegate.h */,
-				F66CFF4719E78DF400878CE3 /* XLYMultiCastDelegate.m */,
-			);
-			name = codes;
-			path = ../../codes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66CFF4419E78DAF00878CE3 /* SwiftViewController.swift in Sources */,
-				F66CFF4819E78DF400878CE3 /* XLYMultiCastDelegate.m in Sources */,
 				F66CFF4319E78DAF00878CE3 /* OCViewController.m in Sources */,
 				F66CFF1E19E78CF000878CE3 /* AppDelegate.swift in Sources */,
+				F601EF971B23117200D89F28 /* XLYMultiCastDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +435,7 @@
 				F66CFF3919E78CF000878CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F66CFF3A19E78CF000878CE3 /* Build configuration list for PBXNativeTarget "XLYMultiCastDelegateDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +444,7 @@
 				F66CFF3C19E78CF000878CE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

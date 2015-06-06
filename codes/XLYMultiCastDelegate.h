@@ -5,6 +5,8 @@
 // Copyright (c) 2014年 王凯. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 /*
  this class is designed to make notifications act like calling delegate methods.
  it uses method forward to notify every delegate which is added already.
@@ -12,14 +14,15 @@
  the multiCastDelegate only find the first delegate who can response to the selector and invoke the invocation
  right in the calling queue not in the delegateQueue. if no delegate can response to the selector, then you will
  always get nil as the return value which stands for nothing.
- 
- once again: MultiCastDelegate only want to make notifications more comfortable.
- */
 
-#import <Foundation/Foundation.h>
+once again: MultiCastDelegate only want to make notifications more comfortable.
+*/
+
 @interface XLYMultiCastDelegate : NSObject
 /**
- the protocol the delegates should confirm. it must not be nil.
+ *  the protocol the delegates should confirm. it must not be nil.
+ *
+ *  IMPORTANT: the methods in protocol should all have no return value. MultiCastDelegate is mainly designed to be used for message dispatch.
  */
 - (instancetype)initWithProtocolName:(NSString *)protocolName;
 - (instancetype)initWithConformingProtocol:(Protocol *)protocol;
